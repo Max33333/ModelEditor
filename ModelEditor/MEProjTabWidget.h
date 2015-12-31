@@ -51,6 +51,7 @@ public:
 
 public slots:
 	void SaveCurrentFile();
+	void SaveAllFile();
 };
 
 #endif // MEPROJTABWIDGET_H

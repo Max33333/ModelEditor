@@ -124,6 +124,7 @@ HRESULT ModelEditor::InitMEProjWidget(const QString& qStrFileName)
 	hrRetCode = m_pMEProjTabWidget->Init(m_pMEProjServer, m_pD3dWidget, QFileInfo(qStrFileName).fileName());
 	KE_COM_PROCESS_ERROR(hrRetCode);
 	connect(ui.action_save, SIGNAL(triggered()), m_pMEProjTabWidget, SLOT(SaveCurrentFile()));
+	connect(ui.actionSaveAll, SIGNAL(triggered()), m_pMEProjTabWidget, SLOT(SaveAllFile()));
 
 	hrRetCode = m_pMEProjServer->Init(m_pMEProjTreeWidget, m_pMEProjTabWidget);
 	KE_COM_PROCESS_ERROR(hrRetCode);
